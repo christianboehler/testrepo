@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <head>
+     <title>Simple Interest Calculator</title>
+     <script src="script.js"></script>
+     <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
+      
+        
+            Amount <input type="number"  id="principal">  <br/>
+            
+            Rate <input type="range" id="rate" min="1" max="20" value="10.25" step="0.25" onchange="updateRate()">  
+            
+            <span id="rate_val" style="background-color:yellow;">
+                10.25
+            </span>% <br/>
+ 
+            No. of Years
+            <input type="number"  id="years" list="all_years">  <br/>
+            <datalist id="all_years">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </datalist>
+            <br/>
+
+            Interest : <span id="result"></span><br>
+    
+            <button onclick="compute()">Compute Interest</button>
+            
+        </div>
+
+        <footer>
+            &#169; This calculator belongs to Christian
+        </footer> <br/>
+
+        
+        
+        Übung für mich! <br/>
+
+        <label for="browser">Choose your browser from the list:</label>
+<input list="browsers" name="browser" id="browser">
+
+<datalist id="browsers">
+  <option value="Edge">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+
+<form name="form1">
+    Tag.Monat.Jahr:
+    <input size="3" type="Text" name="tag" value="01">.
+    <input size="3" type="Text" name="monat" value="01">.
+    <input size="5" type="Text" name="jahr" value="2001"><br>
+   
+          
+    Stunden.Minuten:
+    <input size="3" type="Text" name="stunden" value="01">:
+    <input size="3" type="Text" name="minuten" value="00"><br>
+   
+          
+    <button onclick="berechne()">so alt bin ich</button>
+    <span id="ergebnis" style="background-color:darkgoldenrod"></span>
+    <output type="Text">Tage</output>
+   </form>
+
+             
+    </body>
+</html>
